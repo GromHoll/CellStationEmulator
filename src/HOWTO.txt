@@ -1,0 +1,18 @@
+
+***** Data Base Refresher *****
+
+ ~ DB name : cellStation
+
+ ~ Collection names :   call
+                        customer
+                        tariff
+
+ ~ Initialization tariff cmd list:
+
+use cellStation;
+x = {type: "internal", price: NumberInt(50)};
+y = {type: "input",    price: NumberInt(0)};
+z = {type: "output",   price: NumberInt(100)};
+db.tariff.save(x);
+db.tariff.save(y);
+db.tariff.save(z);
